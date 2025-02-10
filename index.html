@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('cash-register')" class="nav-link">Cash Register</a></li>
+                <li><a href="#" onclick="showSection('transaction-history')" class="nav-link">Transaction History</a></li>
+            </ul>
+        </nav>
+        <div id="cash-register" class="section">
+            <h1 class="title">Cash Register</h1>
+            <div class="input-section">
+                <input type="number" id="amount" placeholder="Enter amount">
+                <button onclick="addTransaction()">Add</button>
+                <button onclick="removeTransaction()">Remove</button>
+            </div>
+            <div class="total-section">
+                <h2>Total: <span id="total">0</span></h2>
+            </div>
+        </div>
+        <div id="transaction-history" class="section hidden">
+            <h2>Transaction History</h2>
+            <ul id="transaction-history-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
